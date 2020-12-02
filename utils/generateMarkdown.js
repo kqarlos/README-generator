@@ -40,10 +40,6 @@ function generateMarkdown(data) {
   - Github: [${data.authorGithub}](https://www.github.com/${data.authorGithub})
   - LinkedIn [${data.authorLinkedIn}](https://www.linkedin.com/in/${data.authorLinkedIn}/)
 
-  ### Built With
-
-
-
   ## License
   
   ![License](https://img.shields.io/github/license/${data.authorGithub}/${data.repoName})
