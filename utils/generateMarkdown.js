@@ -1,6 +1,6 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `
+  var readme = `
   
   # ${data.title}
 
@@ -34,11 +34,7 @@ function generateMarkdown(data) {
   
   ## Usage 
   
-  ### Screenshots
-
-
-  ### Snippets
-  
+  screenshots?
   
   ## Credits
   
@@ -56,12 +52,20 @@ function generateMarkdown(data) {
   
   ![License](https://img.shields.io/github/license/${data.authorGithub}/${data.repoName})
 
-
-
-
-
   
 `;
+
+  if (data.screenshots) {
+    readme = readme.split("screenshots?").join(`
+    ### Screenshots
+
+    ![Site](assets/images/${data.screenshots})
+
+
+    `)
+  }
+
+  return readme;
 }
 
 module.exports = generateMarkdown;

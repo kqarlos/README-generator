@@ -38,6 +38,12 @@ const questions = [
         type: "input",
         name: "authorLinkedIn",
         message: "What's your LinkedIn username?",
+    }, 
+    {
+        type: "input",
+        name: "screenshot",
+        message: "Would you like to add a screenhot? (enter file name):",
+        default: false
     }
 ];
 
@@ -51,7 +57,7 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
     inquirer.prompt(questions).then(answers => {
-        writeToFile("READMETEST.md", generateMarkdown(answers));
+        writeToFile("README.md", generateMarkdown(answers));
 
     });
 }
