@@ -8,7 +8,36 @@ const questions = [
         type: "input",
         name: "title",
         message: "What's the project title?",
-        default: "title"
+    },
+    {
+        type: "input",
+        name: "authorGithub",
+        message: "What's your github username?",
+    },
+    {
+        type: "input",
+        name: "repoName",
+        message: "What's the name of the github repository?",
+    },
+    {
+        type: "input",
+        name: "description",
+        message: "Write a small description of the project",
+    },
+    {
+        type: "input",
+        name: "installation",
+        message: "Write any installation commands",
+    },
+    {
+        type: "input",
+        name: "authorName",
+        message: "What's the name of the author?",
+    },
+    {
+        type: "input",
+        name: "authorLinkedIn",
+        message: "What's your LinkedIn username?",
     }
 ];
 
