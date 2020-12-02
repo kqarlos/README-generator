@@ -46,7 +46,7 @@ function generateMarkdown(data) {
 
   - ${data.authorName}
   - Github: [${data.authorGithub}](https://www.github.com/${data.authorGithub})
-  - LinkedIn [${data.authorLinkedIn}](https://www.linkedin.com/in/${authorLinkedIn}/)
+  - LinkedIn [${data.authorLinkedIn}](https://www.linkedin.com/in/${data.authorLinkedIn}/)
 
   ### Built With
 
