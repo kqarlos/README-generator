@@ -42,7 +42,7 @@ const questions = [
     {
         type: "input",
         name: "screenshot",
-        message: "Would you like to add a screenhot? (enter file name):",
+        message: "Would you like to add a screenshot? (enter file name):",
         default: false
     }
 ];

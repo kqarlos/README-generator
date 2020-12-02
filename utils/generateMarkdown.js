@@ -21,9 +21,7 @@ function generateMarkdown(data) {
   ## Table of Contents
     
   * [Installation](#installation)
-  * [Usage](#usage)
-      * [Screenshots](#screenshots)
-      * [Snippets](#snippets)
+  * [Screenshots](#screenshots)
   * [Credits](#credits)
   * [License](#license)
   
@@ -32,9 +30,7 @@ function generateMarkdown(data) {
   
   ${data.installation}
   
-  ## Usage 
-  
-  screenshots?
+  ${screenshot(data.screenshot)}
   
   ## Credits
   
@@ -55,17 +51,21 @@ function generateMarkdown(data) {
   
 `;
 
-  if (data.screenshots) {
-    readme = readme.split("screenshots?").join(`
-    ### Screenshots
-
-    ![Site](assets/images/${data.screenshots})
-
-
-    `)
-  }
-
   return readme;
+}
+
+function screenshot(screenshot) {
+  if (screenshot) {
+    return `
+
+  ## Screenshot
+
+  ![Site](assets/images/${screenshot})
+
+    `;
+  } else {
+    return ``;
+  }
 }
 
 module.exports = generateMarkdown;
