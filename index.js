@@ -7,7 +7,8 @@ const questions = [
     {
         type: "input",
         name: "title",
-        message: "What's the project title?"
+        message: "What's the project title?",
+        default: "title"
     }
 ];
 
