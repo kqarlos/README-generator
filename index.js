@@ -44,6 +44,19 @@ const questions = [
         name: "screenshot",
         message: "Would you like to add a screenshot? (enter file name):",
         default: false
+    },
+    {
+        type: "input",
+        name: "tools",
+        message: "Would you like to add a tool list?",
+        default: false
+    },
+    {
+        type: "input",
+        name: "toolList",
+        message: "Enter tools separated by a comma",
+        default: "",
+        when: (data) => data.tools
     }
 ];
 
