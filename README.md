@@ -29,8 +29,10 @@
   
   ## Installation
   
-  npm i => node index.js
-  
+  Follow thwse commands to run the command line application
+
+    npm i
+    node index.js
   
 
   ## Screenshot
@@ -38,7 +40,6 @@
   ![Site](assets/images/live.gif)
 
     
-  
   ## Credits
   
   ### Author
@@ -52,10 +53,10 @@
   ### Built With
   </br>
   <p align="center">
-  <img src="https://img.shields.io/badge/-HTML-orange?style=for-the-badge"  alt="HTML" />
+  <img src="https://img.shields.io/badge/-HTML-blue?style=for-the-badge"  alt="HTML" />
       <img src="https://img.shields.io/badge/- CSS-orange?style=for-the-badge"  alt=" CSS" />
-      <img src="https://img.shields.io/badge/- JAVASCRIPT-orange?style=for-the-badge"  alt=" JAVASCRIPT" />
-      <img src="https://img.shields.io/badge/- NODE-orange?style=for-the-badge"  alt=" NODE" />
+      <img src="https://img.shields.io/badge/- JAVASCRIPT-yellow?style=for-the-badge"  alt=" JAVASCRIPT" />
+      <img src="https://img.shields.io/badge/- NODE-green?style=for-the-badge"  alt=" NODE" />
       <img src="https://img.shields.io/badge/- INQUIRER-orange?style=for-the-badge"  alt=" INQUIRER" />
       
   </p>
