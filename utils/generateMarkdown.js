@@ -56,11 +56,13 @@ function generateMarkdown(data) {
 }
 
 function installation(installation) {
+  
   if (installation) {
+    var commands = installation.split(",");
     return `
-    ## Installation
-    Follow these commands to run the command line application:
-        ${installation}`;
+  ## Installation
+  Follow these commands to run the command line application:  
+      >>> ${commands.join("</br>>>> ")}`;
   }
   else
     return ``;

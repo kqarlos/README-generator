@@ -33,7 +33,7 @@ const questions = [
     {
         type: "input",
         name: "installation",
-        message: "Input any installation commands",
+        message: "Input any installation commands separated by a comma",
         when: (data) => data.addInstallation
     },
     {
