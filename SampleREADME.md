@@ -1,6 +1,6 @@
 
   
-  # Readme Generator
+  # Sample Project
 
   </br>
   <p align="center">
@@ -17,7 +17,7 @@
 
   ## Description 
   
-  This is a command line application that gathers project information from the user and generates a readme markdown file.
+  This is a sample project generated from the Readme-Generator command line application.
   
   ## Table of Contents
     
@@ -27,12 +27,10 @@
   * [License](#license)
   
   
-  ## Installation
+    ## Installation
+    Follow these commands to run the command line application:
+        npm i \n node index.js
   
-  Follow these commands to run the command line application:
-
-    npm i
-    node index.js
   
 
   ## Screenshot
@@ -40,6 +38,7 @@
   ![Site](assets/images/live.gif)
 
     
+  
   ## Credits
   
   ### Author
@@ -53,11 +52,9 @@
   ### Built With
   </br>
   <p align="center">
-  <img src="https://img.shields.io/badge/-HTML-blue?style=for-the-badge"  alt="HTML" />
-      <img src="https://img.shields.io/badge/- CSS-orange?style=for-the-badge"  alt=" CSS" />
-      <img src="https://img.shields.io/badge/- JAVASCRIPT-yellow?style=for-the-badge"  alt=" JAVASCRIPT" />
-      <img src="https://img.shields.io/badge/- NODE-green?style=for-the-badge"  alt=" NODE" />
-      <img src="https://img.shields.io/badge/- INQUIRER-orange?style=for-the-badge"  alt=" INQUIRER" />
+  <img src="https://img.shields.io/badge/-Javascript-orange?style=for-the-badge"  alt="Javascript" />
+      <img src="https://img.shields.io/badge/-Node-orange?style=for-the-badge"  alt="Node" />
+      <img src="https://img.shields.io/badge/-Inquirer-orange?style=for-the-badge"  alt="Inquirer" />
       
   </p>
   

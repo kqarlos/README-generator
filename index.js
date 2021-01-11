@@ -25,9 +25,16 @@ const questions = [
         message: "Write a small description of the project",
     },
     {
+        type: "confirm",
+        name: "addInstallation",
+        message: "Would you like to add an installation command?",
+        default: false
+    },
+    {
         type: "input",
         name: "installation",
-        message: "Write any installation commands",
+        message: "Input any installation commands",
+        when: (data) => data.addInstallation
     },
     {
         type: "input",
@@ -40,23 +47,29 @@ const questions = [
         message: "What's your LinkedIn username?",
     }, 
     {
-        type: "input",
-        name: "screenshot",
-        message: "Would you like to add a screenshot? (enter file name):",
+        type: "confirm",
+        name: "addScreenshot",
+        message: "Would you like to add a screenshot?:",
         default: false
-    },
+    }, 
     {
         type: "input",
-        name: "tools",
+        name: "screenshot",
+        message: "Enter file name:",
+        when: (data) => data.addScreenshot
+    },
+    {
+        type: "confirm",
+        name: "addToolList",
         message: "Would you like to add a tool list?",
         default: false
     },
     {
         type: "input",
         name: "toolList",
-        message: "Enter tools separated by a comma",
+        message: "Enter tools separated by a comma (no spaces)",
         default: "",
-        when: (data) => data.tools
+        when: (data) => data.addToolList
     }
 ];
 
@@ -70,7 +83,7 @@ function writeToFile(fileName, data) {
 // function to initialize program
 function init() {
     inquirer.prompt(questions).then(answers => {
-        writeToFile("README.md", generateMarkdown(answers));
+        writeToFile("SampleREADME.md", generateMarkdown(answers));
 
     });
 }

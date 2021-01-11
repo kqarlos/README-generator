@@ -28,10 +28,7 @@ function generateMarkdown(data) {
   * [Credits](#credits)
   * [License](#license)
   
-  
-  ## Installation
-  
-  ${data.installation}
+  ${installation(data.installation)}
   
   ${screenshot(data.screenshot)}
   
@@ -56,6 +53,17 @@ function generateMarkdown(data) {
 `;
 
   return readme;
+}
+
+function installation(installation) {
+  if (installation) {
+    return `
+    ## Installation
+    Follow these commands to run the command line application:
+        ${installation}`;
+  }
+  else
+    return ``;
 }
 
 function builtWith(tools) {
