@@ -25,16 +25,21 @@ const questions = [
         message: "Write a small description of the project",
     },
     {
-        type: "confirm",
-        name: "addInstallation",
-        message: "Would you like to add an installation command?",
-        default: false
+        type: 'checkbox',
+        name: 'sections',
+        message: 'Select which sections to add',
+        choices: [
+            new inquirer.Separator(' = Choose a Sections = '),
+            { name: 'installation' },
+            { name: 'screenshots' },
+            { name: 'tool list' }
+        ]
     },
     {
         type: "input",
         name: "installation",
         message: "Input any installation commands separated by a comma",
-        when: (data) => data.addInstallation
+        when: (data) => (data.sections.indexOf("installation") >= 0)
     },
     {
         type: "input",
@@ -45,31 +50,19 @@ const questions = [
         type: "input",
         name: "authorLinkedIn",
         message: "What's your LinkedIn username?",
-    }, 
-    {
-        type: "confirm",
-        name: "addScreenshot",
-        message: "Would you like to add a screenshot?:",
-        default: false
-    }, 
+    },
     {
         type: "input",
         name: "screenshot",
-        message: "Enter file name:",
-        when: (data) => data.addScreenshot
-    },
-    {
-        type: "confirm",
-        name: "addToolList",
-        message: "Would you like to add a tool list?",
-        default: false
+        message: "Enter screenshot file name:",
+        when: (data) => (data.sections.indexOf("screenshots") >= 0)
     },
     {
         type: "input",
         name: "toolList",
-        message: "Enter tools separated by a comma (no spaces)",
+        message: "Enter tools used separated by a comma (no spaces)",
         default: "",
-        when: (data) => data.addToolList
+        when: (data) => (data.sections.indexOf("tool list") >= 0)
     }
 ];
 
