@@ -65,6 +65,7 @@ const questions = [
         default: "",
         when: (data) => (data.sections.indexOf("tool list") >= 0)
     },
+
     {
         type: 'list',
         message: 'Please select type of License ',
