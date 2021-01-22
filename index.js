@@ -32,7 +32,8 @@ const questions = [
             new inquirer.Separator(' = Choose a Sections = '),
             { name: 'installation' },
             { name: 'screenshots' },
-            { name: 'tool list' }
+            { name: 'tool list' },
+            { name: 'license'}
         ]
     },
     {
@@ -63,6 +64,56 @@ const questions = [
         message: "Enter tools used separated by a comma (no spaces)",
         default: "",
         when: (data) => (data.sections.indexOf("tool list") >= 0)
+    },
+    {
+        type: 'list',
+        message: 'Please select type of License ',
+        name: 'license',
+        choices: [
+            {
+                name: 'None',
+                value: 0
+            },
+            {
+                name: 'GNU General Public',
+                value: 1
+            },
+            {
+                name: 'MIT',
+                value: 2
+            },
+            {
+                name: 'BSD 2-Clause "Simplified" License',
+                value: 3
+            },
+            {
+                name: 'Boost Software License 1.0',
+                value: 4
+            },
+            {
+                name: 'Creative Commons Zero v1.0 Universal',
+                value: 5
+            },
+            {
+                name: 'Eclipse Public License',
+                value: 6
+            },
+            {
+                name: 'Mozilla Public License',
+                value: 7
+            },
+            {
+                name: 'The Unlicense',
+                value: 8
+            },
+            {
+                name: 'Other',
+                value: 9
+            },
+
+        ],
+        when: (data) => (data.sections.indexOf("license") >= 0)
+
     }
 ];
 
