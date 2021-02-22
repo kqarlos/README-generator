@@ -41,10 +41,10 @@ function generateMarkdown(data) {
   - LinkedIn [${data.authorLinkedIn}](https://www.linkedin.com/in/${data.authorLinkedIn}/)
 
 
-  ${builtWith(data.toolList)}
+${builtWith(data.toolList)}
 
 
-  ${license(data.license)}
+${license(data.license)}
   
 `;
 
